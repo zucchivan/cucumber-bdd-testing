@@ -1,6 +1,6 @@
 assesso:
   datacare:
-    root: http://localhost:8080/datacare
-    about: http://localhost:8080/datacare/about
+    root: "http://localhost:8080/datacare"
+    about: "http://localhost:8080/datacare/about"
 
-evidence-location: /tmp
+evidence-location: "/tmp"

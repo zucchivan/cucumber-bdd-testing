@@ -1,5 +1,6 @@
 package br.com.assesso.datacaretest.steps;
 
+import br.com.assesso.datacaretest.pages.AboutPage;
 import br.com.assesso.datacaretest.utils.WebDriverAssertions;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
@@ -15,30 +16,31 @@ public class AboutSteps {
 
   @Autowired
   private WebDriverAssertions webDriverAssertions;
-    /*@Autowired
-    private InfoGloboGitHubPage infoGloboGitHub;
-    @Autowired
-    private PeopleComponent peopleComponent;*/
+  @Autowired
+  private AboutPage aboutPage;
 
   @Dado("^que o usuário esteja na página de about$")
   public void a() {
-    //infoGloboGitHub.access();
-    assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("About"))).isTrue();
+    aboutPage.access();
+    await().atMost(TEN_SECONDS).untilAsserted(() ->
+            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare - About"))).isTrue());
   }
 
   @Quando("^procurar por exceção$")
   public void b() {
     //infoGloboGitHub.clickOnPeopleCategory();
+    aboutPage.getBody().getText().contains("ERRO");
     //await().atMost(TEN_SECONDS).untilAsserted(() -> assertThat(peopleComponent.size()).isOne());
   }
 
-  @E("^procurar por \"([^\"]*)\"$")
+/*  @E("^procurar por \"([^\"]*)\"$")
   public void c(String name) {
     //peopleComponent.searchFor(name);
-  }
+  }*/
 
   @Entao("^não deve encontrar nenhuma$")
   public void d() {
+    assertThat(aboutPage.getBody().getText().contains("ERRO")).isFalse();
     //await().atMost(TEN_SECONDS).untilAsserted(() -> assertThat(peopleComponent.sizeOfVisiblePeople()).isOne());
   }
 }

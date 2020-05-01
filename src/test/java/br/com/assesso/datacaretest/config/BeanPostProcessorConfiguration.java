@@ -2,6 +2,9 @@ package br.com.assesso.datacaretest.config;
 
 //import br.com.globo.annotations.CucumberPageObject;
 
+import br.com.assesso.datacaretest.annotations.CucumberPageObject;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +20,7 @@ public class BeanPostProcessorConfiguration {
   }
 
   /**
-   * To proxy all WebElement fields which may be used by PageObjects.
+   * Proxy para inicialização de todos os WebElements que serão usados por PageObjects.
    */
   public static class PageObjectBeanPostProcessor implements BeanPostProcessor {
 
@@ -26,9 +29,9 @@ public class BeanPostProcessorConfiguration {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) {
-/*      if (bean.getClass().isAnnotationPresent(CucumberPageObject.class)) {
+      if (bean.getClass().isAnnotationPresent(CucumberPageObject.class)) {
         PageFactory.initElements(applicationContext.getBean(WebDriver.class), bean);
-      }*/
+      }
       return bean;
     }
 
