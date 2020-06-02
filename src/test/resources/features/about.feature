@@ -1,5 +1,5 @@
 # language: pt
-  Funcionalidade: Funcionamento da tela de about do Datacare
+  Funcionalidade: Funcionamento da tela de about do DataCare
 
     Cenário: Verificar que a página foi carregada com sucesso
       Dado que o usuário esteja na página de about

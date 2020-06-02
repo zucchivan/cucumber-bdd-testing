@@ -7,7 +7,7 @@
       E clicar no botão entrar
       Então o usuário deve ser logado com sucesso no Datacare
 
-    Cenario: Login sem sucesso usando credenciais inválidas
+    Cenário: Login sem sucesso usando credenciais inválidas
       Dado que o usuário esteja na página de login
       Quando preencher os campos de usuário e senha com as credenciais inválidas
       E clicar no botão entrar
