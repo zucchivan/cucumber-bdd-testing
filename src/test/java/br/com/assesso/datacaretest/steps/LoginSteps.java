@@ -65,4 +65,17 @@ public class LoginSteps {
             assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare"))).isTrue());
   }
 
+  @Dado("^que o usuário esteja logado no DataCare$")
+  public void usuarioLogado() {
+    loginPage.access();
+    await().atMost(TEN_SECONDS);
+    loginPage.getUserFieldElement().sendKeys("admin_dc");
+    loginPage.getPasswordElement().sendKeys("Admin123");
+    loginPage.getBtnElement().click();
+    await().atMost(TEN_SECONDS);
+    await().atMost(TEN_SECONDS).untilAsserted(() ->
+            assertThat(webDriverAssertions.
+                    evaluatePageTitle(title -> title.equals("DataCare - Lista de Processos"))).isTrue());
+  }
+
 }

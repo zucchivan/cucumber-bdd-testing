@@ -1,6 +1,8 @@
 package br.com.assesso.datacaretest.utils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -18,5 +20,9 @@ public class WebDriverAssertions {
 
     public boolean evaluatePageTitle(Predicate<String> evaluation) {
         return evaluation.test(browser.getTitle());
+    }
+
+    public boolean hasWebElementWithText(String text) {
+        return browser.findElement(By.xpath("//*[contains(text(), '"+ text +"')]")) != null;
     }
 }
