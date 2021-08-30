@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.aop;
+package com.zucchivan.bdd.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -28,7 +28,7 @@ public class EvidenceAspect {
   @Value("${evidence-location}")
   private String path;
 
-  @Around("br.com.assesso.datacaretest.aop.PointCuts.stepDefinitionsPointcut()")
+  @Around("com.zucchivan.bdd.aop.PointCuts.stepDefinitionsPointcut()")
   public void takePrintScreen(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
     proceedingJoinPoint.proceed();
     File file = ((TakesScreenshot) applicationContext.getBean(WebDriver.class)).getScreenshotAs(OutputType.FILE);

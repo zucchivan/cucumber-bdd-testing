@@ -1,6 +1,6 @@
-package br.com.assesso.datacaretest.pages;
+package com.zucchivan.bdd.pages;
 
-import br.com.assesso.datacaretest.annotations.CucumberPageObject;
+import com.zucchivan.bdd.annotations.CucumberPageObject;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ public class LoginPage {
 
     @Autowired
     private WebDriver webDriver;
-    @Value("${assesso.datacare.root}")
+    @Value("${portal.root}")
     private String address;
 
     @Getter

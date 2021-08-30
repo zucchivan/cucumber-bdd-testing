@@ -1,13 +1,12 @@
-package br.com.assesso.datacaretest.config;
+package com.zucchivan.bdd.config;
 
+import com.zucchivan.bdd.utils.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.context.annotation.*;
 import org.springframework.core.type.AnnotatedTypeMetadata;
-
-import static br.com.assesso.datacaretest.utils.Constants.SPRING_PROFILES_HEADLESS;
 
 @Configuration
 @EnableAspectJAutoProxy
@@ -23,7 +22,7 @@ public class WebDriverConfiguration {
 
     @Bean
     @Scope("cucumber-glue")
-    @Profile(SPRING_PROFILES_HEADLESS)
+    @Profile(Constants.SPRING_PROFILES_HEADLESS)
     public WebDriver webDriverHeadless() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -34,7 +33,7 @@ public class WebDriverConfiguration {
     public static class EnableWhenHeadlessDeactivatedCondition implements Condition {
         @Override
         public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-            return !context.getEnvironment().acceptsProfiles(SPRING_PROFILES_HEADLESS);
+            return !context.getEnvironment().acceptsProfiles(Constants.SPRING_PROFILES_HEADLESS);
         }
     }
 

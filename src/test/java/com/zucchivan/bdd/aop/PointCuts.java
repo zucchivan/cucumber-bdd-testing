@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.aop;
+package com.zucchivan.bdd.aop;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -11,7 +11,7 @@ public class PointCuts {
   /**
    * Method is empty as this is just a Pointcut, the implementations are in the advices.
    */
-  @Pointcut("within(br.com.assesso.datacaretest.steps..*)")
+  @Pointcut("within(com.zucchivan.bdd.steps..*)")
   public void stepDefinitionsPointcut() {
 
   }

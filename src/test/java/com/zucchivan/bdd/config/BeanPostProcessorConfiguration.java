@@ -1,8 +1,8 @@
-package br.com.assesso.datacaretest.config;
+package com.zucchivan.bdd.config;
 
 //import br.com.globo.annotations.CucumberPageObject;
 
-import br.com.assesso.datacaretest.annotations.CucumberPageObject;
+import com.zucchivan.bdd.annotations.CucumberPageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest;
+package com.zucchivan.bdd;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

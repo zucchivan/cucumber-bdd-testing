@@ -1,13 +1,13 @@
-package br.com.assesso.datacaretest;
+package com.zucchivan.bdd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DatacaretestApplication {
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatacaretestApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 }

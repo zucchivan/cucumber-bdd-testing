@@ -1,7 +1,7 @@
 # language: pt
   Funcionalidade: Tela de administração de processos e funcionalidade de criação
   Cenário de Fundo: Login já realizado
-    Dado que o usuário esteja logado no DataCare
+    Dado que o usuário esteja logado no Portal
 
     Cenário: Criação de um processo
       Dado que o usuário esteja na página de processos

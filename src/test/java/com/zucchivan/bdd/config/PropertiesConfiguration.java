@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.config;
+package com.zucchivan.bdd.config;
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.context.annotation.Bean;

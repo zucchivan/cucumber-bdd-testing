@@ -1,7 +1,7 @@
-package br.com.assesso.datacaretest.steps;
+package com.zucchivan.bdd.steps;
 
-import br.com.assesso.datacaretest.pages.AboutPage;
-import br.com.assesso.datacaretest.utils.WebDriverAssertions;
+import com.zucchivan.bdd.pages.AboutPage;
+import com.zucchivan.bdd.utils.WebDriverAssertions;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
@@ -23,7 +23,7 @@ public class AboutSteps {
   public void a() {
     aboutPage.access();
     await().atMost(TEN_SECONDS).untilAsserted(() ->
-            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare - About"))).isTrue());
+            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("Portal - About"))).isTrue());
   }
 
   @Quando("^procurar por exceção$")

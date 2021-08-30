@@ -1,6 +1,5 @@
-assesso:
-  datacare:
-    root: "http://localhost:8080/datacare"
-    about: "http://localhost:8080/datacare/about"
+portal:
+  root: "http://localhost:8080/"
+  about: "http://localhost:8080/about"
 
 evidence-location: "/tmp"

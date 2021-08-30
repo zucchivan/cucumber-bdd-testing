@@ -1,8 +1,7 @@
-package br.com.assesso.datacaretest.steps;
+package com.zucchivan.bdd.steps;
 
-import br.com.assesso.datacaretest.pages.AboutPage;
-import br.com.assesso.datacaretest.pages.LoginPage;
-import br.com.assesso.datacaretest.utils.WebDriverAssertions;
+import com.zucchivan.bdd.pages.LoginPage;
+import com.zucchivan.bdd.utils.WebDriverAssertions;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
@@ -24,7 +23,7 @@ public class LoginSteps {
   public void a() {
     loginPage.access();
     await().atMost(TEN_SECONDS).untilAsserted(() ->
-            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare"))).isTrue());
+            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("Portal"))).isTrue());
   }
 
   @Quando("^preencher os campos de usuário e senha com as credenciais de admin$")
@@ -41,10 +40,10 @@ public class LoginSteps {
     loginPage.getBtnElement().click();
   }
 
-  @Entao("^o usuário deve ser logado com sucesso no Datacare$")
+  @Entao("^o usuário deve ser logado com sucesso no portal$")
   public void d() {
     await().atMost(TEN_SECONDS).untilAsserted(() ->
-            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare - Lista de Processos"))).isTrue());
+            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("Portal - Lista de Processos"))).isTrue());
   }
 
   @Quando("^preencher os campos de usuário e senha com as credenciais inválidas$")
@@ -62,10 +61,10 @@ public class LoginSteps {
   @E("^o usuário não deve ser redirecionado para outra página$")
   public void g() {
     await().atMost(TEN_SECONDS).untilAsserted(() ->
-            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare"))).isTrue());
+            assertThat(webDriverAssertions.evaluatePageTitle(title -> title.equals("Portal"))).isTrue());
   }
 
-  @Dado("^que o usuário esteja logado no DataCare$")
+  @Dado("^que o usuário esteja logado no portal$")
   public void usuarioLogado() {
     loginPage.access();
     await().atMost(TEN_SECONDS);
@@ -75,7 +74,7 @@ public class LoginSteps {
     await().atMost(TEN_SECONDS);
     await().atMost(TEN_SECONDS).untilAsserted(() ->
             assertThat(webDriverAssertions.
-                    evaluatePageTitle(title -> title.equals("DataCare - Lista de Processos"))).isTrue());
+                    evaluatePageTitle(title -> title.equals("Portal - Lista de Processos"))).isTrue());
   }
 
 }

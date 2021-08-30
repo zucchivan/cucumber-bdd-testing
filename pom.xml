@@ -8,11 +8,11 @@
     <version>2.2.6.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>br.com.assesso</groupId>
-  <artifactId>datacaretest</artifactId>
+  <groupId>com.zucchivan</groupId>
+  <artifactId>cucumber-bdd-testing</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>datacaretest</name>
-  <description>Testes de integração para o Datacare</description>
+  <name>cucumber-bdd-testing</name>
+  <description>Exemplo de um projeto de testes de integração seguindo BDD</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

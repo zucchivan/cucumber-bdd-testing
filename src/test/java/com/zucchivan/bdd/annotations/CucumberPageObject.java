@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.annotations;
+package com.zucchivan.bdd.annotations;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
-package br.com.assesso.datacaretest.steps;
+package com.zucchivan.bdd.steps;
 
-import br.com.assesso.datacaretest.pages.ProcessoPage;
-import br.com.assesso.datacaretest.utils.WebDriverAssertions;
+import com.zucchivan.bdd.pages.ProcessoPage;
+import com.zucchivan.bdd.utils.WebDriverAssertions;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
@@ -22,7 +22,7 @@ public class ProcessoSteps {
   @Dado("^que o usuário esteja na página de processos$")
   public void a() {
     await().atMost(TEN_SECONDS).untilAsserted(() ->
-            assertTrue(webDriverAssertions.evaluatePageTitle(title -> title.equals("DataCare - Lista de Processos"))));
+            assertTrue(webDriverAssertions.evaluatePageTitle(title -> title.equals("Portal - Lista de Processos"))));
   }
 
   @Quando("^preencher o campo de texto com o nome \\\"([^\\\"]*)\\\"$")

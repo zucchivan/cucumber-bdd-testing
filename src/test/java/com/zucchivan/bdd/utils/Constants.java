@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.utils;
+package com.zucchivan.bdd.utils;
 
 public class Constants {
 

@@ -1,4 +1,4 @@
-package br.com.assesso.datacaretest.utils;
+package com.zucchivan.bdd.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
