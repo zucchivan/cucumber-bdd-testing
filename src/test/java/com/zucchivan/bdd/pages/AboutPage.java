@@ -13,6 +13,7 @@ public class AboutPage {
 
     @Autowired
     private WebDriver webDriver;
+
     @Value("${portal.about}")
     private String address;
 

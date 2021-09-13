@@ -31,10 +31,12 @@ public class WebDriverConfiguration {
     }
 
     public static class EnableWhenHeadlessDeactivatedCondition implements Condition {
+
         @Override
         public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
             return !context.getEnvironment().acceptsProfiles(Constants.SPRING_PROFILES_HEADLESS);
         }
+
     }
 
 }

@@ -28,19 +28,11 @@ public class AboutSteps {
 
   @Quando("^procurar por exceção$")
   public void b() {
-    //infoGloboGitHub.clickOnPeopleCategory();
     aboutPage.getBody().getText().contains("ERRO");
-    //await().atMost(TEN_SECONDS).untilAsserted(() -> assertThat(peopleComponent.size()).isOne());
   }
-
-/*  @E("^procurar por \"([^\"]*)\"$")
-  public void c(String name) {
-    //peopleComponent.searchFor(name);
-  }*/
 
   @Entao("^não deve encontrar nenhuma$")
   public void d() {
     assertThat(aboutPage.getBody().getText().contains("ERRO")).isFalse();
-    //await().atMost(TEN_SECONDS).untilAsserted(() -> assertThat(peopleComponent.sizeOfVisiblePeople()).isOne());
   }
 }

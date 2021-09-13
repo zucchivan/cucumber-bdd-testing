@@ -16,6 +16,7 @@ public class LoginSteps {
 
   @Autowired
   private WebDriverAssertions webDriverAssertions;
+
   @Autowired
   private LoginPage loginPage;
 
@@ -30,11 +31,8 @@ public class LoginSteps {
   public void b() {
     loginPage.getUserFieldElement().sendKeys("admin_dc");
     loginPage.getPasswordElement().sendKeys("Admin123");
-    //infoGloboGitHub.clickOnPeopleCategory();
-    //await().atMost(TEN_SECONDS).untilAsserted(() -> assertThat(peopleComponent.size()).isOne());
   }
 
-  //@E("^procurar por \"([^\"]*)\"$")
   @E("^clicar no botão entrar$")
   public void c() {
     loginPage.getBtnElement().click();

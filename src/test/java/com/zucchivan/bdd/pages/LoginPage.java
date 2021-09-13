@@ -13,6 +13,7 @@ public class LoginPage {
 
     @Autowired
     private WebDriver webDriver;
+
     @Value("${portal.root}")
     private String address;
 
